@@ -15,7 +15,47 @@ body {
   letter-spacing: -0.01em;
 }
 
+a {
+  transition: all .2s ease-out;
+}
+
 .page-wrapper {
   display: flex;
   height: 100%;
+}
+
+.main-area {
+  height: calc(100% - 120px);
+  align-items: center;
+}
+
+.welcome-bar {
+  .columns > .column:last-child {
+    text-align: right;
+  }
+}
+
+.login {
+  background-color: $white;
+  box-shadow: 0 4px 20px 5px rgba($newgrey, .1);
+  border-radius: 5px;
+  
+  h1, p, .eve-sso {
+    text-align: center;
+  }
+}
+
+.not-authed {
+  background-color: $red;
+  box-shadow: 0 4px 20px 5px rgba($newgrey, .1);
+  border-radius: 5px;
+
+  h1 {
+    color: $white;
+  }
+
+  & > * {
+    text-align: center;
+    color: $white;
+  }
 }

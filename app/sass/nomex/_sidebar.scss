@@ -9,22 +9,27 @@
 .sidebar {
   background-color: $dark;
   min-width: 250px;
+  max-width: 275px;
   height: 100vh;
   padding: 3rem 2rem;
+  position: relative;
+
+  & > div {
+    width: 100%;
+  }
 
   h1.title {
     color: $white;
-    font-weight: 300;
-    margin-bottom: .5rem;
+    font-weight: 400;
+    margin-bottom: .3rem;
   }
   h2 {
     color: $newgrey;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   // Character Area
   .character {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2em;
@@ -46,5 +51,44 @@
   }
 
   // Navigation
-  
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .nav-items .nav-item {
+    position: relative;
+    padding: .2em 0;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    &.active a,
+    &:hover a {
+      color: $white;
+    }
+
+    &.active:before {
+      content: '';
+      display: inline-block;
+      margin-left: -2rem;
+      width: 4px;
+      border-radius: 0 3px 3px 0;
+      height: 100%;
+      background-color: $red;
+      position: absolute;
+    }
+  }
+  .nav-items .nav-item a {
+    transition: all .4s ease-out;
+    color: $newgrey;
+  }
+
+  // Footer
+  .sidebar-footer {
+    position: absolute;
+    bottom: 3rem;
+  }
 }

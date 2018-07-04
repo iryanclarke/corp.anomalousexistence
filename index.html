@@ -40,47 +40,56 @@
           <a href="{{ url_for('walletjournal') }}">Corp Wallet (Director Only)</a>
         </div>
       </div>
+      <div class="sidebar-footer">
+        <a href="{{ url_for('logout') }}">Logout</a>
+      </div>
     </div>
 
     <div class="content container">
-      <div class="columns">
+      <section class="section welcome-bar">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <span class="title is-5">
+              Super Secret Area
+            </span>
+          </div>
+          <div class="column is-one-quarter is-offset-6">
+            Anomalous Existence
+          </div>
+        </div>
+      </section>
+      <div class="columns main-area">
         <div class="column is-half is-offset-one-quarter">
-          <main role="main">
-            <div class="jumbotron">
-              <p class="lead text-center">Please login for access</p>
-              <p class="text-center">
-                <a class="btn btn-lg btn-warning" href="{{ url_for('login') }}" role="button">
-                  <img src="https://images.contentful.com/idjq7aai9ylm/18BxKSXCymyqY4QKo8KwKe/c2bdded6118472dd587c8107f24104d7/EVE_SSO_Login_Buttons_Small_White.png?w=195&amp;h=30"
-                    alt="Log in with eveonline.com">
-                </a>
-              </p>
+          <section class="section login">
+            <h1 class="title is-1">
+              Login
+            </h1>
+            <p>
+              Use CCP's auth service to see your corp information
+            </p>
+            <div class="eve-sso">
+              <a class="button is-primary" href="{{ url_for('login') }}" role="button">
+                <img src="https://images.contentful.com/idjq7aai9ylm/18BxKSXCymyqY4QKo8KwKe/c2bdded6118472dd587c8107f24104d7/EVE_SSO_Login_Buttons_Small_White.png?w=195&amp;h=30"
+                  alt="Log in with eveonline.com">
+              </a>
             </div>
-          </main>
+          </section>
+          <section class="section not-authed">
+            <h1 class="title is-1">
+              You are not in Anomalous Existence
+            </h1>
+            <p>
+              YOU ARE A SPAI!
+            </p>
+            <div class="eve-sso">
+              <a class="button is-primary" href="#" role="button">
+                Get Rekt
+              </a>
+            </div>
+          </section>
         </div>
       </div>
-
-
-      <div class="container">
-        <main role="main">
-          <div class="jumbotron">
-            <div class ="media">
-              <div class="media-left media-middle">
-                <img src="{{ character_portrait_link }}" alt="{{ current_user.character_name }}"/>
-              </div>
-              <div class="media-body" >
-                <p class='text-center'> Hello <strong>{{ current_user.character_name }}</strong></p>
-                <p class='text-center'> Select which information you are looking for </p>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div> <!-- /container -->
     </div>
-
-
-    <footer class="container">
-      <a href="{{ url_for('logout') }}">Logout</a>
-    </footer>
   </div>
 
 <link href="public/css/app.css" rel="stylesheet">

@@ -4,7 +4,7 @@
 
 // 2. Set your own initial variables
 // Update blue
-$blue: #72d0eb;
+$blue: #599AF8;
 
 $red: #D16966;
 
@@ -12,13 +12,14 @@ $dark: #181D1F;
 
 $newgrey: #646465;
 // Add a serif family
-$family-serif: "Lato", serif;
+$family-serif: -apple-system, BlinkMacSystemFont, "Lato", sans-serif;
 
 // 3. Set the derived variable
 // Use the existing orange as the danger color
 $danger: $orange;
 // Use the new serif family
 $family-primary: $family-serif;
+$text: $newgrey;
 
 
 // 4. Setup your Custom Colors
