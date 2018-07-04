@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="G. (Kyria) Bisch">
+    <meta name="author" content="E. (Zand Vor) Boaen">
+
+    <title>Anomalous Existence Corporation</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="sidebar">
+      <div class="character">
+        <div class="character-portrait">
+          <img src="https://placekitten.com/g/125/125">
+        </div>
+        <div class="character-information">
+          <h1 class="title is-4">Cryostassiss</h1>
+          <h2 class="title is-6">Director Jr.</h2>
+        </div>
+      </div>
+      <div class="nav-items">
+        <div class="nav-item active">
+          <a href="{{ url_for('structures') }}">Structures Fuel Status</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ url_for('corpdues') }}">Corp Dues</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ url_for('market') }}">Red Queen Market</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ url_for('walletjournal') }}">Corp Wallet (Director Only)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <main role="main">
+            <div class="jumbotron">
+              <p class="lead text-center">Please login for access</p>
+              <p class="text-center">
+                <a class="btn btn-lg btn-warning" href="{{ url_for('login') }}" role="button">
+                  <img src="https://images.contentful.com/idjq7aai9ylm/18BxKSXCymyqY4QKo8KwKe/c2bdded6118472dd587c8107f24104d7/EVE_SSO_Login_Buttons_Small_White.png?w=195&amp;h=30"
+                    alt="Log in with eveonline.com">
+                </a>
+              </p>
+            </div>
+          </main>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <main role="main">
+          <div class="jumbotron">
+            <div class ="media">
+              <div class="media-left media-middle">
+                <img src="{{ character_portrait_link }}" alt="{{ current_user.character_name }}"/>
+              </div>
+              <div class="media-body" >
+                <p class='text-center'> Hello <strong>{{ current_user.character_name }}</strong></p>
+                <p class='text-center'> Select which information you are looking for </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div> <!-- /container -->
+    </div>
+
+
+    <footer class="container">
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </footer>
+  </div>
+
+<link href="public/css/app.css" rel="stylesheet">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

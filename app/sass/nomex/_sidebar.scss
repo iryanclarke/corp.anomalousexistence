@@ -1,0 +1,50 @@
+//
+// @file     sass/nomex/_sidebar.scss
+// @parent   sass/nomex/app.scss
+//
+// @desc     Black sidebar
+// @usage    Side navigation on the app
+//
+
+.sidebar {
+  background-color: $dark;
+  min-width: 250px;
+  height: 100vh;
+  padding: 3rem 2rem;
+
+  h1.title {
+    color: $white;
+    font-weight: 300;
+    margin-bottom: .5rem;
+  }
+  h2 {
+    color: $newgrey;
+    font-weight: 300;
+  }
+
+  // Character Area
+  .character {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+
+    & > div {
+      width: 100%;
+    }
+  }
+  .character-portrait {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  .character-portrait img {
+    border-radius: 50%;
+  }
+  .character-information {
+    text-align: center;
+  }
+
+  // Navigation
+  
+}

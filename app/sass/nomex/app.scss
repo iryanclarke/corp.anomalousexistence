@@ -1,0 +1,21 @@
+//
+// @file     sass/nomex/app.scss
+// @parent   
+//
+// @desc     Parent Sass file
+// @usage    Compiles to app.css
+//
+
+@import "custom-bulma";
+
+@import "sidebar";
+
+body {
+  height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.page-wrapper {
+  display: flex;
+  height: 100%;
+}
